@@ -77,8 +77,13 @@ function FeedbackForm({ onSubmit }) {
             placeholder="Enter your full name"
             className={`w-full px-4 py-2 border rounded-lg transition focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
               errors.fullName ? "border-red-500" : "border-gray-300"
+            } ${
+              document.documentElement.classList.contains("dark")
+                ? "text-white"
+                : "text-black"
             }`}
           />
+
           {errors.fullName && (
             <p className="mt-1 text-sm text-red-600">{errors.fullName}</p>
           )}
@@ -101,8 +106,13 @@ function FeedbackForm({ onSubmit }) {
             placeholder="your.email@example.com"
             className={`w-full px-4 py-2 border rounded-lg transition focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
               errors.email ? "border-red-500" : "border-gray-300"
+            } ${
+              document.documentElement.classList.contains("dark")
+                ? "text-white"
+                : "text-black"
             }`}
           />
+
           {errors.email && (
             <p className="mt-1 text-sm text-red-600">{errors.email}</p>
           )}
@@ -125,8 +135,13 @@ function FeedbackForm({ onSubmit }) {
             placeholder="Please share your thoughts..."
             className={`w-full px-4 py-2 border rounded-lg transition focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
               errors.message ? "border-red-500" : "border-gray-300"
+            } ${
+              document.documentElement.classList.contains("dark")
+                ? "text-white"
+                : "text-black"
             }`}
           />
+
           {errors.message && (
             <p className="mt-1 text-sm text-red-600">{errors.message}</p>
           )}
